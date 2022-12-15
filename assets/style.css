@@ -2,12 +2,12 @@
 
 @font-face {
     font-family: "Endor";
-    src: url(./assets/fonts/ENDOR___.ttf);
+    src: url(./fonts/ENDOR___.ttf);
 }
 
 @font-face {
     font-family: "Zallman";
-    src: url(./assets/fonts/ZallmanCaps.TTF);
+    src: url(./fonts/ZallmanCaps.TTF);
 }
 
 * {
@@ -21,7 +21,7 @@ html, body {
 }
 
 body{
-    background-image: url(./assets/img/Background.jpeg);
+    background-image: url(./img/Background.jpeg);
     background-size: cover;
     background-attachment: fixed;
     font-size: 1.2em;
@@ -95,7 +95,7 @@ header {
     height: 25px;
     margin-top: 1vh;
     width: 100%;
-    background: url(./assets/img/underline.png) no-repeat bottom;
+    background: url(./img/underline.png) no-repeat bottom;
     background-size: contain;
 }
 
@@ -122,7 +122,7 @@ header nav a:hover{
     width: 100%;
     margin-top: -1.5vh;
     right: 20%;
-    background: url(./assets/img/separator_top.png) no-repeat bottom right;
+    background: url(./img/separator_top.png) no-repeat bottom right;
     background-size: contain;
 }
 
@@ -150,7 +150,7 @@ section h2 {
 
 .separator_h2 {
     margin:auto;
-    background-image: url(./assets/img/separator_h2.png);
+    background-image: url(./img/separator_h2.png);
     background-size: contain;
     background-repeat: no-repeat;
     height: 100px;
