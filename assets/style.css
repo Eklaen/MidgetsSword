@@ -2,12 +2,12 @@
 
 @font-face {
     font-family: "Endor";
-    src: url(/assets/fonts/ENDOR___.ttf);
+    src: url(./assets/fonts/ENDOR___.ttf);
 }
 
 @font-face {
     font-family: "Zallman";
-    src: url(/assets/fonts/ZallmanCaps.TTF);
+    src: url(./assets/fonts/ZallmanCaps.TTF);
 }
 
 * {
