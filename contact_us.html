@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans&effect=outline">
+    <link rel="shortcut icon" href="/assets/img/favicon.png" type="image/x-icon">
+    <title>Midget's Sword</title>
+</head>
+<body>
+    <div id="bodyContainer">
+        <header>
+            <div id="menu_title">
+                <div class="title_effect">
+                    <h1><a href="/index.html">The Midget's Sword</a></h1>
+                </div>
+                <span class="underline"></span>
+                <nav>
+                    <ul>
+                        <li><a href="/index.html">Home</a></li>
+                        <li><a href="/lalafell_of_the_month.html">Lalafell of the Month</a></li>
+                        <li><a href="/gallery.html">Gallery</a></li>
+                        <li><a href="/contact_us.html">Contact us</a></li>
+                    </ul>
+                </nav>
+                <span class="separator_line"></span>
+            </div>
+        </header>
+        <section>
+            <h2>Contact us!</h2>
+            <figure class="separator_h2"></figure>
+            <form>
+                <fieldset  id="contact_form">
+                    <legend>Contact form</legend>
+                    <label for="name" data-end="*">Last name</label>
+                    <input type="text" name="name" id="name_field" class="field">
+                    <label for="fistname" data-end="*">First name</label>
+                    <input type="text" name="firstname" id="firstname_field" class="field">
+                    <label for="server" data-end="*">Server</label>
+                    <input type="text" name="server" id="server_field" class="field">
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email_field" class="field">
+                    <label for="email" data-end="*">Message</label>
+                    <textarea name="message" id="message_field" cols="30" rows="10"></textarea>
+                    <p>Fields marked with an * are required.</p>
+                    <button id="submit_button" onclick="messageSent()">Send your message</button>
+                </fieldset>
+            </form>
+        </section>
+        <footer>
+            <p>All rights reserved</p>
+            <a href="https://eu.finalfantasyxiv.com/" target="_blank"><img src="/assets/img/final_fantasy_xiv_logo.png" alt="" class="ffxiv"></a>
+        </footer>
+    </div>
+<script src="/assets/code.js"></script>
+</body>
+</html>

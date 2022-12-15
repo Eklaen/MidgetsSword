@@ -1,0 +1,441 @@
+@import url('https://fonts.googleapis.com/css2?family=Alice&family=El+Messiri&family=MedievalSharp&family=Open+Sans&display=swap');
+
+@font-face {
+    font-family: "Endor";
+    src: url(/assets/fonts/ENDOR___.ttf);
+}
+
+@font-face {
+    font-family: "Zallman";
+    src: url(/assets/fonts/ZallmanCaps.TTF);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+
+body{
+    background-image: url(/assets/img/Background.jpeg);
+    background-size: cover;
+    background-attachment: fixed;
+    font-size: 1.2em;
+}
+
+#bodyContainer{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+}
+
+/* HEADER */
+header {
+    width: 70%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.545) 0%, rgba(255,255,255,0) 47%, rgba(255,255,255,0) 100%);
+    align-self: center;
+}
+
+.title_container {
+    max-width: 800px;
+    padding: 30px;
+}
+
+#menu_title{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    margin-top: 1em;
+}
+
+.title_effect h1 {
+    color: #fff;
+    padding: 5px;
+    font-family: monospace;
+    overflow: hidden;
+    border-right: .15em solid rgba(204, 204, 204, 0);
+    white-space: nowrap;
+    margin: 0 auto;
+    letter-spacing: .15em;
+    animation: 
+      typing 3s steps(30, end),
+      blinking .5s step-end 7;
+  }
+
+#menu_title h1 a{
+    font-family: "Endor";
+    font-size: 2.3em;
+    margin-bottom: -0.1em;
+    background-color: #f3ec78;
+    background-image: linear-gradient(45deg, #000000, #818181);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    border: none;
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+  
+@keyframes blinking {
+    from, to { border-color: transparent }
+    50% { border-color: rgb(0, 0, 0) }
+}
+
+.underline{
+    height: 25px;
+    margin-top: 1vh;
+    width: 100%;
+    background: url(/assets/img/underline.png) no-repeat bottom;
+    background-size: contain;
+}
+
+#menu_title nav ul{
+    display: flex;
+    list-style-type: none;
+    gap: 20px;
+    padding: 0px;
+}
+
+header nav a{
+    text-decoration: none;
+    color: black;
+    font-family: "El Messiri";
+}
+
+header nav a:hover{
+    border-bottom: 1px solid black;
+}
+
+.separator_line{
+    position: relative;
+    height: 90px;
+    width: 100%;
+    margin-top: -1.5vh;
+    right: 20%;
+    background: url(/assets/img/separator_top.png) no-repeat bottom right;
+    background-size: contain;
+}
+
+/* ----- BODY ----- */
+section {
+    background-color: rgb(209, 193, 178);
+    border: 5px ridge rgb(43, 26, 0);
+    border-radius: 30px;
+    padding: 10px;
+    max-width: 900px;
+    margin: auto;
+    width: 70%;
+    flex-grow: 1;
+}
+
+section p {
+    font-family: "Alice";
+}
+
+section h2 {
+    text-align: center;
+    font-family: "MedievalSharp";
+    font-size: 2em;
+}
+
+.separator_h2 {
+    margin:auto;
+    background-image: url(/assets/img/separator_h2.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 100px;
+    width: 250px;
+    transform: rotateX(180deg);
+    margin-top: -5em;
+    margin-bottom: 1em;
+}
+
+/* ----- HOME ----- */
+#establishment_presentation {
+    padding: 45px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+#presentation {
+    width: 60%;
+    align-self: center;
+    border: 5px ridge rgb(101, 54, 3);
+}
+
+#establishment_presentation p:first-of-type::first-letter {
+    float: left;
+    font-size: 6em;
+    padding: 2px;
+    font-family: "Zallman";
+}
+
+.links {
+    text-decoration: none;
+    color: black;
+    font-style: italic;
+}
+
+/* ----- Lalafell of the Month ----- */
+#interview_page {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.cards {
+    max-width: 300px;
+    height: 400px;
+    border-radius: 10px;
+    border: 3px solid black;
+}
+
+/* CARD FLIP EFFECT */
+.card_flip {
+    flex: 2;
+    cursor: pointer;
+    max-width: 400px;
+
+}
+
+.card {
+    height: 400px;
+    width: 400px;
+    transform-style: preserve-3d;
+    transition: all 0.8s ease-in;
+}
+
+.card_front, .card_back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+.card_front {
+    z-index: 2;
+    backface-visibility: hidden;
+}
+
+.card_back {
+    z-index: 1;
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+}
+
+.card.is-flipped {
+    transform: rotateY(180deg);
+}
+
+.card_flip p {
+    position: relative;
+    text-align: center;
+}
+
+
+/* CONTENT */
+#interview_content {
+    flex-basis: 50%;
+}
+
+#interview_content p:first-of-type::first-letter {
+    float: left;
+    font-size: 6em;
+    padding: 2px;
+    font-family: "Zallman";
+}
+
+/* ----- GALLERY ----- */
+.gallery_container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.gallery_container img {
+    cursor: pointer;
+    border-radius: 5px;
+    vertical-align: middle;
+    max-width: 350px;
+    max-height: 275px;
+    min-width: 200px;
+    min-height: 120px;
+    object-fit: cover;
+}
+
+/* GALLERY MODAL */
+.modal {
+    z-index:1;
+    display:none;
+    padding-top:10px;
+    position:fixed;
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;
+    overflow:auto;
+    background-color:rgb(0,0,0);
+    background-color:rgba(0,0,0,0.8)
+}
+    
+.modal-content{
+    margin: auto;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.gallery_item:hover {
+    filter: grayscale(1);
+}
+
+.close {
+    text-decoration:none;
+    float:right;
+    font-size:24px;
+    font-weight:bold;
+    color:white;
+    cursor: pointer;
+}
+
+/* ----- CONTACT US ----- */
+#contact_form {
+    display: flex;
+    flex-direction: column;
+    border-radius: 15px;
+}
+
+fieldset p {
+    font-size: 0.7em;
+}
+
+label {
+    font-family: "Alice";
+}
+
+label::after {
+    content: attr(data-end);
+    color: red;
+}
+
+.field {
+    max-width: 300px;
+    margin-bottom: 20px;
+    transition: 1s ease-in-out;
+}
+
+.field:focus {
+    max-width: 75%;
+}
+
+#message_field {
+    margin-bottom: 20px;
+    width: 85%;
+    min-height: 200px;
+}
+
+#submit_button {
+    width: 200px;
+    margin: auto;
+    border-radius: 15px;
+    border: 1px solid;
+    transition: 0.5s ease-in-out;
+}
+
+#submit_button:hover {
+    background-color: rgb(176, 176, 176);
+}
+
+/* FOOTER */
+footer {
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 100%;
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer p {
+    
+    color: white;
+}
+
+.ffxiv {
+    height: 50%;
+}
+
+/* ---- MEDIA QUERIES ---- */
+@media screen and (max-width: 850px) {
+    h1 {font-size: 1.2em;}
+    nav ul {background-color:rgb(209, 193, 178); border-radius: 5px; border: 2px ridge rgb(43, 26, 0);}
+    nav a {font-size: 1.1em;}
+    .separator_line {display: none;}
+    p {font-size: 1em}
+    section {width: 90%;}
+    section h2 {font-size: 1.2em;}
+    .separator_h2 {width: 25%;}
+    #presentation {width: 450px; height: 275px;}
+    #interview_content {flex-basis: 100%;}
+    .gallery_container img {max-width: 450px; max-height: 400px; min-width: 0px; min-height: 0px;}
+    legend {font-size: 0.9em;}
+    label {font-size: 0.9em;}
+    #submit_button {width: 85%;}
+}
+
+@media screen and (max-width: 500px) {
+    header {background: none;}
+    h1 {font-size: 0.8em;}
+    nav ul {background-color:rgb(209, 193, 178); border-radius: 5px; border: 2px ridge rgb(43, 26, 0);}
+    nav a {font-size: 0.8em;}
+    p {font-size: 0.9em}
+    section {width: 90%;}
+    section h2 {font-size: 1.2em;}
+    .separator_h2 {width: 45%;}
+    #presentation {width: 250px; height: 175px;}
+    .cards {max-width: 230px; height: 375px;}
+    .card {width: 300px; height: 375px;}
+    .card_flip {max-width: 300px;}
+    .card_flip p {font-size: 0.9em;}
+    #interview_content {flex-basis: 100%;}
+    .gallery_container img {max-width: 250px; max-height: 200px; min-width: 0px; min-height: 0px;}
+    legend {font-size: 0.8em;}
+    label {font-size: 0.8em;}
+    #submit_button {width: 75%;}
+}
+
+@media screen and (max-width: 300px) {
+    header {background: none;}
+    h1 {font-size: 0.6em;}
+    nav ul {background-color:rgb(209, 193, 178); border-radius: 5px; border: 2px ridge rgb(43, 26, 0);}
+    nav a {font-size: 0.6em;}
+    p {font-size: 0.7em}
+    section {width: 90%;}
+    section h2 {font-size: 1em;}
+    .separator_h2 {width: 75%;}
+    #presentation {width: 150px; height: 100px;}
+    .cards {max-width: 175px; height: 275px;}
+    .card {width: 255px; height: 275px;}
+    .card_flip {max-width: 275px;}
+    .card_flip p {font-size: 0.9em;}
+    #interview_content {flex-basis: 100%;}
+    .gallery_container img {max-width: 170px; max-height: 100px; min-width: 0px; min-height: 0px;}
+    legend {font-size: 0.7em;}
+    label {font-size: 0.7em;}
+    #submit_button {width: 75%;}
+}
