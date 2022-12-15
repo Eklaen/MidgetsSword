@@ -95,7 +95,7 @@ header {
     height: 25px;
     margin-top: 1vh;
     width: 100%;
-    background: url(/assets/img/underline.png) no-repeat bottom;
+    background: url(./assets/img/underline.png) no-repeat bottom;
     background-size: contain;
 }
 
@@ -122,7 +122,7 @@ header nav a:hover{
     width: 100%;
     margin-top: -1.5vh;
     right: 20%;
-    background: url(/assets/img/separator_top.png) no-repeat bottom right;
+    background: url(./assets/img/separator_top.png) no-repeat bottom right;
     background-size: contain;
 }
 
@@ -150,7 +150,7 @@ section h2 {
 
 .separator_h2 {
     margin:auto;
-    background-image: url(/assets/img/separator_h2.png);
+    background-image: url(./assets/img/separator_h2.png);
     background-size: contain;
     background-repeat: no-repeat;
     height: 100px;

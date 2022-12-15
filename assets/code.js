@@ -7,7 +7,6 @@ function messageSent() {
   var field1 = document.querySelector("#name_field").value;
   var field2 = document.querySelector("#firstname_field").value;
   var field3 = document.querySelector("#server_field").value;
-  var field4 = document.querySelector("#email_field").value;
   var field5 = document.querySelector("#message_field").value;
 
   if ( field1 == "" || field2 == "" || field3 == "" || field5 == "") {
